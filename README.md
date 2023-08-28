@@ -1,6 +1,6 @@
 # Bookmarker
 
-<img src="{https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white}" />
+![shell badge](https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)
 
 A simple bash script to take descriptors + URLs from a file, use `fzf` to filter
 and open the URL as a new tab in `firefox`.
