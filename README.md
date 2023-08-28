@@ -9,9 +9,10 @@ and open the URL as a new tab in `firefox`.
 
 Make sure [fzf](https://github.com/junegunn/fzf) is installed.
 
-Make the script executable and link it to a local bin folder. Create a file
-called `.links.txt` in the user root folder (`~/.links.txt`). The script
-can be called using `bookmarker`, and a `fzf` window should appear.
+Make the script executable and link it to a local bin folder (`usr/local/bin` on
+Mac for example). Create a file called `.links.txt` in the user root folder
+(`~/.links.txt`). The script can be called using `bookmarker`, and a `fzf`
+window should appear.
 
 ## Usage
 
@@ -24,4 +25,4 @@ name:    https://www.URL.com
 The formatting of the file should follow these rules:
 
 - The white space can be tabs or spaces,
-- The URL should **alwais** start with `http://`.
+- The URL should **always** start with `http://`.
