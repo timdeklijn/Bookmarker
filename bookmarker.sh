@@ -7,7 +7,7 @@
 #
 # from the text in the "links" file, use the first column as search in fzf.
 # Thene give back the second column, place this in the `url` variable.
-url=$(echo "$(cat ~/.links.txt)" | \
+url=$(cat ~/.links.txt | \
   fzf --color 16 | \
   awk '{print $NF}' \
 )
@@ -23,10 +23,10 @@ if [[ $OSTYPE =~ ^darwin ]]; then
   # There is not really a nice command line interface for firefox on MacOS. So
   # we have to call firefox from the `Applications` folder. This is not ideal,
   # but works.
-  open -a /Applications/Firefox.app $url
+  open -a /Applications/Firefox.app "$url"
 elif [[ $OSTYPE =~ ^linux ]]; then
   # Linux has a nice way to open a new tab in firefox.
-  firefox --new-tab $url
+  firefox --new-tab "$url"
 else
   echo "OS not supported"
 fi
