@@ -18,10 +18,15 @@ if [ "$url" = "" ]; then
   exit 0
 fi
 
-
-# TODO: switch firefox call based on current OS. Currently this is only working
-#       on MacOS, want to make it work on Linux too
-if [[ $OSTYPE == 'darwin'* ]]; then
-  echo 'macOS'
+# Based on the operating system open firefox and open the url in a new tab.
+if [[ $OSTYPE =~ ^darwin ]]; then
+  # There is not really a nice command line interface for firefox on MacOS. So
+  # we have to call firefox from the `Applications` folder. This is not ideal,
+  # but works.
   open -a /Applications/Firefox.app $url
+elif [[ $OSTYPE =~ ^linux ]]; then
+  # Linux has a nice way to open a new tab in firefox.
+  firefox --new-tab $url
+else
+  echo "OS not supported"
 fi

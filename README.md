@@ -29,5 +29,6 @@ The formatting of the file should follow these rules:
 
 ## TODO
 
-- [ ] Switch how to open browser based on OS
 - [ ] select browser
+- [ ] create a link file if it does not exists.
+- [ ] error handling for errors in links file + unsupported operating system.
