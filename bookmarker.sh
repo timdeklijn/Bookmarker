@@ -14,11 +14,14 @@ url=$(echo "$(cat ~/.links.txt)" | \
 
 # Early exit, if url is not set, exit the script and DO NOT open firefox.
 if [ "$url" = "" ]; then
-  echo "no choice made, exiting"
+  echo "no link selected, exiting"
   exit 0
 fi
 
 
 # TODO: switch firefox call based on current OS. Currently this is only working
 #       on MacOS, want to make it work on Linux too
-open -a /Applications/Firefox.app $url
+if [[ $OSTYPE == 'darwin'* ]]; then
+  echo 'macOS'
+  open -a /Applications/Firefox.app $url
+fi

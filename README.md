@@ -26,3 +26,8 @@ The formatting of the file should follow these rules:
 
 - The white space can be tabs or spaces,
 - The URL should **always** start with `http://`.
+
+## TODO
+
+- [ ] Switch how to open browser based on OS
+- [ ] select browser
