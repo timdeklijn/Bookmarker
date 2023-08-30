@@ -7,10 +7,7 @@
 #
 # from the text in the "links" file, use the first column as search in fzf.
 # Thene give back the second column, place this in the `url` variable.
-url=$(cat ~/.links.txt | \
-  fzf --color 16 | \
-  awk '{print $NF}' \
-)
+url=$(fzf --color 16 < ~/.links.txt |  awk '{print $NF}')
 
 # Early exit, if url is not set, exit the script and DO NOT open firefox.
 if [ "$url" = "" ]; then
